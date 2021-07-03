@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<title>Tic Tac</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+		  
+ 	</head>
+	<body>
+		<h1><strong>TIC TAC TOE</strong></h1>
+		<br>
+
+
+		<!-- select p1 -->
+
+		<input type="text" class="stylee" name="p1" placeholder="Player1 Name" id="p1Name">
+
+  		<select name='username' class="stylee" id="p1"onchange="checkValue()">
+		    <option value="X" id="s1">X</option>
+		    <option value="O" id="s2">O</option>
+		    <option value=" " id="y" selected=""></option>
+  		</select><br>
+
+	  		<!-- Select p2 -->
+
+ 		<input type="text" class="stylee" name="p2" placeholder="Player2 Name" id="p2Name">
+
+ 	 	<select name='username' class="stylee" id="p2" onchange="checkValue()">
+		    <option value="X" id="s1">X</option>
+		    <option value="O" id="s2">O</option>
+		    <option value=" " id="y" selected=""></option>
+  		</select>
+  		<br>
+
+		<!-- Buttons -->
+		<div style="text-align: center;">
+			<button id="sGame" onclick="startGame()">Let's Play</button>
+			<button id="eGame" onclick="endGame()">Start New Game</button>
+			<button id="aGame" onclick="anotherRound()"  disabled="">A Nother Round</button>
+		</div>
+		<br><br>
+
+		<!-- Score -->
+		<div class="main-score">
+			<div class="item" >Score</div>
+				<div class="score">
+					<div id="p1N" class="playerStyle" >Player1 </div>
+					<div id="p2N" class="playerStyle" >Player2</div>
+					<div id="p1S" ></div>
+					<div id="p2S" ></div>
+				</div>
+				<h2 id="winName" class="item"></h2>
+			</div>	
+		</div>
+
+		<!-- Grids -->
+		<div class="grid-container" >
+			<div id="one" onclick="playTurn(one,turn)"></div>
+			<div id="two" onclick="playTurn(two,turn)"></div>
+			<div id="three" onclick="playTurn(three,turn)"></div>
+			<div id="four" onclick="playTurn(four,turn)"></div>
+			<div id="five" onclick="playTurn(five,turn)"></div>
+			<div id="six" onclick="playTurn(six,turn)"></div>
+			<div id="seven" onclick="playTurn(seven,turn)"></div>
+			<div id="eight" onclick="playTurn(eight,turn)"></div>
+			<div id="nine" onclick="playTurn(nine,turn)"></div>
+		</div>
+
+
+		<!-- image of players: -->
+			<input id="p1Image" type="text" value="'<img src='X.png' height=50px>" name="x" hidden="">
+			<input id="p2Image" type="text" value="'<img src='O.png' height=50px>" name="o" hidden="">
+
+		<footer>Devolped By: Ahmed Saleh</footer>
+			
+
+		<script type="text/javascript" src="script.js" ></script>
+	</body>
+</html>
