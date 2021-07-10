@@ -33,11 +33,12 @@ p2S.value=0;
 
 
 function checkValue(){
+
 	/*Check For Same symbol*/
 	if(p1.value===p2.value)
 		{alert("Choose another Symbol");
-	p1.value=y.value;
-	p2.value=y.value;
+		p1.value=p1.value;
+		p2.value=y.value;
 	}
 }
 
@@ -58,6 +59,7 @@ function resetGrid(){
 
 /*lets play button*/
 function startGame(){
+
 	
 		//validation if game is on
   if(gameOn == true) //game is already started
@@ -221,7 +223,7 @@ function isWin(){
 
 
  function playTurn(a/*box object*/,b /*turn*/){
- 	
+ 		
   	if(gameOn == false){
     	return;
     }
@@ -234,23 +236,49 @@ function isWin(){
     var symbol;
     var pName;
     var pImage;
+    
     var count;
+
+   
     
     if(b == 'p1'){
-    	symbol = player1Symbol;
-    	count=player1Symbol;	
-    	pImage=p1Image.value;
-    	pName=p1Name.value;
-      turn = 'p2';
-      a.value=symbol;
+ 			
+	 			if(p1.value===s1.value){
+	    	symbol = player1Symbol;
+	    	count=player1Symbol;	
+	    	pImage=p1Image.value;
+	    	pName=p1Name.value;
+	      turn = 'p2';
+	      a.value=symbol;
+  		}
+	    	else if(p1.value===s2.value){
+	    	symbol = player1Symbol;
+	    	count=player1Symbol;	
+	    	pImage=p2Image.value;
+	    	pName=p1Name.value;
+	      turn = 'p2';
+	      a.value=symbol;
+    	}
+    
      }
     else if (b == 'p2'){
+    	
+    	if(p2.value=== s1.value){
+    	symbol = player2Symbol;
+    	count=player2Symbol;
+    	pImage=p1Image.value;
+    	pName=p2Name.value;
+      turn = 'p1';
+      a.value=symbol;
+    }else if(p2.value=== s2.value){
     	symbol = player2Symbol;
     	count=player2Symbol;
     	pImage=p2Image.value;
     	pName=p2Name.value;
       turn = 'p1';
       a.value=symbol;
+    }
+    	
     }
     
   a.innerHTML = pImage;
