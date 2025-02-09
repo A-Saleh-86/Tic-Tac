@@ -1,6 +1,6 @@
 # Tic-Tac-Toe 🎮  
 
-A fun and interactive Tic-Tac-Toe game with both **single-player** and **two-player** modes. The game also keeps track of scores!  
+A fun and interactive Tic-Tac-Toe game with **two-player** modes. The game also keeps track of scores!  
 
 ## Features  
 ✅ Play with a friend (Two-player mode)  
